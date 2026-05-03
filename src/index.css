@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Mukta:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 39 60% 97%;
+    --foreground: 25 50% 15%;
+
+    --card: 39 55% 99%;
+    --card-foreground: 25 50% 15%;
+
+    --popover: 39 55% 99%;
+    --popover-foreground: 25 50% 15%;
+
+    --primary: 24 95% 50%;
+    --primary-foreground: 39 60% 98%;
+
+    --secondary: 43 74% 49%;
+    --secondary-foreground: 25 50% 15%;
+
+    --muted: 39 40% 92%;
+    --muted-foreground: 25 25% 40%;
+
+    --accent: 43 96% 56%;
+    --accent-foreground: 25 50% 15%;
+
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 35 40% 85%;
+    --input: 35 40% 88%;
+    --ring: 24 95% 50%;
+
+    --gold: 43 74% 49%;
+    --gold-light: 48 96% 65%;
+    --saffron: 24 95% 53%;
+    --saffron-deep: 18 88% 42%;
+    --maroon: 0 60% 30%;
+
+    --gradient-temple: linear-gradient(135deg, hsl(24 95% 53%) 0%, hsl(43 90% 55%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(43 90% 60%) 0%, hsl(38 80% 45%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(24 88% 55% / 0.95) 0%, hsl(0 60% 30% / 0.9) 100%);
+
+    --shadow-temple: 0 12px 40px -12px hsl(24 95% 50% / 0.35);
+    --shadow-gold: 0 8px 24px -8px hsl(43 74% 49% / 0.4);
+    --shadow-soft: 0 4px 16px -4px hsl(25 50% 15% / 0.1);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 39 55% 98%;
+    --sidebar-foreground: 25 50% 15%;
+    --sidebar-primary: 24 95% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 43 96% 56%;
+    --sidebar-accent-foreground: 25 50% 15%;
+    --sidebar-border: 35 40% 85%;
+    --sidebar-ring: 24 95% 50%;
+  }
+
+  .dark {
+    --background: 25 35% 8%;
+    --foreground: 39 50% 95%;
+    --card: 25 30% 12%;
+    --card-foreground: 39 50% 95%;
+    --popover: 25 30% 12%;
+    --popover-foreground: 39 50% 95%;
+    --primary: 24 95% 55%;
+    --primary-foreground: 25 50% 10%;
+    --secondary: 43 70% 50%;
+    --secondary-foreground: 25 50% 10%;
+    --muted: 25 25% 18%;
+    --muted-foreground: 39 30% 70%;
+    --accent: 43 80% 55%;
+    --accent-foreground: 25 50% 10%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 25 25% 22%;
+    --input: 25 25% 22%;
+    --ring: 24 95% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Mukta', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.01em;
+  }
+}
+
+@layer utilities {
+  .bg-temple-gradient {
+    background: var(--gradient-temple);
+  }
+  .bg-gold-gradient {
+    background: var(--gradient-gold);
+  }
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
+  }
+  .shadow-temple {
+    box-shadow: var(--shadow-temple);
+  }
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  .text-saffron {
+    color: hsl(var(--saffron));
+  }
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+  .text-maroon {
+    color: hsl(var(--maroon));
+  }
+  .border-gold {
+    border-color: hsl(var(--gold));
+  }
+
+  .ornate-divider {
+    background-image: radial-gradient(circle, hsl(var(--gold)) 1px, transparent 1px);
+    background-size: 12px 2px;
+    height: 2px;
+  }
+}
